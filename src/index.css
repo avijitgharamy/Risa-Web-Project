@@ -1,0 +1,77 @@
+@import "tailwindcss";
+
+@theme {
+  --color-deep-obsidian: #0C0C0C;
+  --color-heritage-gold: #E6FF00;
+  --color-muted-bronze: #444444;
+  --color-whatsapp-green: #E6FF00;
+  
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", "Inter", Georgia, serif;
+}
+
+/* Sharp, pure high-contrast border and custom glass accent for Bold Typography */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Custom Text Stroke for Bold Modern Typography cases */
+.text-stroke-white {
+  -webkit-text-stroke: 2px #FFFFFF;
+  color: transparent;
+}
+
+.text-stroke-lime {
+  -webkit-text-stroke: 1.5px #E6FF00;
+  color: transparent;
+}
+
+/* Micro-animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseSlow {
+  0%, 100% {
+    transform: scale(1.03);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pulse-slow {
+  animation: pulseSlow 10s ease-in-out infinite;
+}
+
